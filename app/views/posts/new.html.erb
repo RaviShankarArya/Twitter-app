@@ -1,0 +1,6 @@
+<%= form_for @post, :as => :post,:method => :post, :url => user_posts_path(@user) do |f| %>
+
+	<label>Title:</label><%= f.text_field :title %><br/>
+	<label>Description:</label><%= f.text_area :description %><br/>
+	<%= f.submit "Add Post" %>
+<% end %>

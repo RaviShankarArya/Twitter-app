@@ -1,0 +1,7 @@
+<table>
+	<tr><th><%=@user.name%> Home Page</th></tr>
+	<% @posts.each do |post| %>
+		<tr><td><p><%=post.title%> by <%=post.user.name%> at <%= post.created_at.strftime("%d-%m-%Y %H:%M:%S")%> </p></td></tr>
+	<% end %>
+</table>
+<%= link_to "Add Post", new_user_post_path(@user)%>
